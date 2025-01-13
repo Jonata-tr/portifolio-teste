@@ -11,15 +11,15 @@
       <a href="" class="logo">Jonatan</a>
 
       <nav class="nav-top">
-        <a href="#">Home</a>
-        <a href="#" class="nav-active">Trabalhos</a>
-        <a href="#">Sobre-mim</a>
-        <a href="#">Contatos</a>
+        <a href="#home" class="nav-active">Home</a>
+        <a href="#projects">Trabalhos</a>
+        <a href="#about-me">Sobre-mim</a>
+        <a href="#contact">Contatos</a>
       </nav>
     </header>
 
     <main>
-      <section class="home">
+      <section class="home" id="home">
         <div class="home-img">
           <img src="./assets/mommy-zani.jpg" alt="Uma imagem minha sorrindo" />
         </div>
@@ -35,42 +35,17 @@
           </p>
 
           <div class="home-contact">
-            <a
-              href="https://gelbooru.com/index.php?page=post&s=view&id=11245835&tags=zenless_zone_zero+small_breasts+"
-              target="_blank"
-            >
-              <img src="./assets/mommy-zani.jpg" alt="" />
-            </a>
-
-            <a
-              href="https://gelbooru.com/index.php?page=post&s=view&id=11245835&tags=zenless_zone_zero+small_breasts+"
-              target="_blank"
-            >
-              <img src="./assets/mommy-zani.jpg" alt="" />
-            </a>
-
-            <a
-              href="https://gelbooru.com/index.php?page=post&s=view&id=11245835&tags=zenless_zone_zero+small_breasts+"
-              target="_blank"
-            >
-              <img src="./assets/mommy-zani.jpg" alt="" />
-            </a>
-
-            <a
-              href="https://gelbooru.com/index.php?page=post&s=view&id=11245835&tags=zenless_zone_zero+small_breasts+"
-              target="_blank"
-            >
-              <img src="./assets/mommy-zani.jpg" alt="" />
-            </a>
-
             <div class="home-buttons">
-              <button>Contrate-me</button>
+              <button class="red-button">Contrate-me</button>
+            </div>
+            <div class="home-buttons">
+              <button class="red-button">Fale comigo</button>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="projects">
+      <section class="projects" id="projects">
         <h1 class="section-header">
           Meus projetos e desenhos <span># Escolha qual ira querer ver #</span>
         </h1>
@@ -107,7 +82,7 @@
                   <img src="./assets/mommy-zani.jpg" alt="" />
                   <img src="./assets/mommy-zani.jpg" alt="" />
                 </div>
-                <button>Mais detalhes</button>
+                <button class="red-button">Mais detalhes</button>
               </div>
             </div>
           </div>
@@ -133,7 +108,7 @@
                   <img src="./assets/mommy-zani.jpg" alt="" />
                   <img src="./assets/mommy-zani.jpg" alt="" />
                 </div>
-                <button>Mais detalhes</button>
+                <button class="red-button">Mais detalhes</button>
               </div>
             </div>
           </div>
@@ -159,7 +134,7 @@
                   <img src="./assets/mommy-zani.jpg" alt="" />
                   <img src="./assets/mommy-zani.jpg" alt="" />
                 </div>
-                <button>Mais detalhes</button>
+                <button class="red-button">Mais detalhes</button>
               </div>
             </div>
           </div>
@@ -185,25 +160,25 @@
                   <img src="./assets/mommy-zani.jpg" alt="" />
                   <img src="./assets/mommy-zani.jpg" alt="" />
                 </div>
-                <button>Mais detalhes</button>
+                <button class="red-button">Mais detalhes</button>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="about-me">
+      <section class="about-me" id="about-me">
         <div class="container-holder">
-          <h2>Mais sobre mim</h2>
+          <h2 class="section-header">Mais sobre mim</h2>
           <div class="about-container">
             <div class="side-bar">
-              <nav>
-                <button type="button" onclick="" class="active">
+              <nav class="side-nav">
+                <button type="button" class="active">
                   Sobre-mim
                 </button>
-                <button type="button" onclick="">Habilidades</button>
-                <button type="button" onclick="">Estudos</button>
-                <button type="button" onclick="">Experiencias</button>
+                <button type="button">Habilidades</button>
+                <button type="button">Estudos</button>
+                <button type="button">Experiencias</button>
               </nav>
             </div>
 
@@ -220,11 +195,33 @@
                   voluptatem enim totam nulla architecto officiis laborum,
                   dolorum possimus debitis commodi mollitia dolorem quis quam
                   est quia dolore nihil temporibus rem.
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Recusandae voluptatem enim totam nulla architecto officiis
+                  laborum, dolorum possimus debitis commodi mollitia dolorem
+                  quis quam est quia dolore nihil temporibus rem. Lorem ipsum
+                  dolor sit amet consectetur, adipisicing elit. Recusandae
+                  voluptatem enim totam nulla architecto officiis laborum,
+                  dolorum possimus debitis commodi mollitia dolorem quis quam
+                  est quia dolore nihil temporibus rem.
+                </p>
+
+                <h3 class="content-header">
+                  Por que escolhi programação
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Recusandae voluptatem enim totam nulla architecto officiis
+                  laborum, dolorum possimus debitis commodi mollitia dolorem
+                  quis quam est quia dolore nihil temporibus rem. Lorem ipsum
+                  dolor sit amet consectetur, adipisicing elit. Recusandae
+                  voluptatem enim totam nulla architecto officiis laborum,
+                  dolorum possimus debitis commodi mollitia dolorem quis quam
+                  est quia dolore nihil temporibus rem.
                 </p>
               </div>
 
               <!-- Skill content -->
-              <div class="desc-holder active">
+              <div class="desc-holder ">
                 <h3 class="content-header">Minhas habilidades</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -239,7 +236,7 @@
               </div>
 
               <!-- Education content -->
-              <div class="desc-holder active">
+              <div class="desc-holder ">
                 <h3 class="content-header">Meus estudos</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -254,7 +251,7 @@
               </div>
 
               <!-- Experiences content -->
-              <div class="desc-holder active">
+              <div class="desc-holder ">
                 <h3 class="content-header">Minhas experiências</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -272,7 +269,7 @@
         </div>
       </section>
 
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="contact-holder">
           <h2 class="section-header">Me mande um email ou fale comigo por outros canais.</h2>
           <div class="contact-content">
@@ -354,4 +351,6 @@
       </section>
     </main>
   </body>
+
+  <script src="script.js"></script>
 </html>

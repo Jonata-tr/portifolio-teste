@@ -29,9 +29,10 @@ body{
 	max-width: 1400px;
 
 	position: relative;
-	top: -25px;
 	left: 50%;
 	transform: translateX(-50%);
+
+	margin-bottom: 68px;	
 
 	font-size: 2rem;
 }
@@ -49,24 +50,38 @@ body{
 
 	z-index: -1;
 }
+.section-header::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	background: var(--main-bg);
+
+	border-radius: 25px;
+
+	z-index: -2;
+}
 
 header{
-	background: rgb(235, 235, 235);
-
-	width: var(--page-witdh);
+	width: 100vw;
 
 	position: fixed;
 	left: 50%;
 	transform: translateX(-50%);
+	background: var(--main-bg);
 
 	display: flex;
 	align-items: center;
 	justify-items: center;
 	justify-content: space-between;
 
-	padding: 1.2rem 2rem;
+	box-shadow: 0px -10px 60px -2px rgba(253, 133, 133, 0.336);
+
+	padding: 20px 50px;
 
 	border-radius: 0px 0px 10px 10px;
+
+	border-bottom: 2px solid var(--text-dest);
 
 	z-index: 1000;
 }
@@ -74,7 +89,6 @@ header{
 header a{
 	text-decoration: none;
 	font-size: 1.2rem;
-	color: black;
 
 	padding: 4px;
 }
@@ -97,7 +111,6 @@ header .logo{
 }
 
 .nav-active{
-
 	position: relative;
 	color: var(--text-dest);
 }
@@ -128,12 +141,12 @@ a{
 	position: relative;
 }
 
-a::after{
+header a::after{
 	width: 0;
 	transition: .2s;
 }
 
-a:not(.nav-active):hover::after{
+header a:not(.nav-active):hover::after{
 	content: '';
 	position: absolute;
 	top: 0;
@@ -216,20 +229,10 @@ a:not(.nav-active):hover::after{
 	gap: 24px;
 }
 
-.home-contact a{
-	text-decoration: none;
-	width: fit-content;
-}
+.home-contact .red-button{
+	padding: 20px 32px;
 
-.home-contact a img{
-	width: 50px;
-	height: 50px;
-
-	outline: 2px solid red;
-	object-fit: cover;
-	object-position: 0% 100%;
-	
-	border-radius: 10px;
+	border-color: rgb(255, 255, 255);
 }
 
 /* projects section */
@@ -413,7 +416,7 @@ a:not(.nav-active):hover::after{
 	justify-content: space-between;
 }
 
-.bottom-details button{
+.red-button{
 	width: fit-content;
 	background-color: var(--text-dest);
 
@@ -455,35 +458,17 @@ a:not(.nav-active):hover::after{
 	padding: 00px 0 40px;
 }
 
-.about-me h2{
-	position: relative;
-	top: -15px;
 
-	font-size: 2rem;
-
-	text-align: left;
-	margin-bottom: 36px;
-
-	z-index: 100;
+.about-me h2::after{
+	background: var(--sec-bg);
 }
 
-.about-me h2::before{
-	content: '';
-	position: absolute;
-	width: 70%;
-	height: 100%;
-	background: rgb(206, 38, 38);
-
-	border-radius: 25px;
-
-	left: -30%;
-
-	z-index: -1;
-}
 
 .about-me .about-container{
 	display: flex;
 	gap: 20px;
+
+	padding: 0px 0px 40px;
 }
 
 .about-me .side-bar nav{
@@ -498,6 +483,8 @@ a:not(.nav-active):hover::after{
 	border: 0;
 	border-left: 2px solid whitesmoke;
 	
+	cursor: pointer;
+
 	background: none;
 }
 
@@ -519,10 +506,12 @@ a:not(.nav-active):hover::after{
 	flex-direction: column;
 	justify-content: start;
 
-	padding: 36px;
+	padding: 20px 36px;
 
 	max-width: 110ch;
 }
+
+
 
 .desc-holder{
 	display: none;
@@ -532,6 +521,20 @@ a:not(.nav-active):hover::after{
 
 .desc-holder.active{
 	display: block;
+}
+
+.desc-holder > .content-header{
+	border-bottom: 6px solid rgb(235, 56, 101);
+
+	text-transform: uppercase;
+	color: #f8f5eb;
+	font-weight: bold;
+
+	margin-bottom: 20px;
+}
+
+.content-header:not(:first-child){
+	margin-top: 48px;
 }
 
 .contact{
