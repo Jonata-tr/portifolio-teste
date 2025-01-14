@@ -9,8 +9,6 @@ function navStateChange(){
 				}
 			});
 
-			console.log(link);
-			
 			link.classList.add("nav-active");
 		})
 	})
@@ -23,8 +21,6 @@ function aboutSideBar(){
 	let descContent = document.querySelectorAll(".desc-holder");
 
 	sideBar.forEach((button, indice) => {
-		console.log('teste');
-
 		button.addEventListener("click", () => {
 			sideBar.forEach(btn =>  {
 				btn.classList.remove('active');
@@ -40,3 +36,46 @@ function aboutSideBar(){
 }
 
 aboutSideBar();
+
+window.addEventListener('scroll', () => setScrollChanges()) 
+
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-top a');
+	
+let lastScrollTop = 0;
+let current = '';
+
+function setScrollChanges(){
+	const nav = document.querySelector("header");
+	const st = document.documentElement.scrollTop;
+
+  if(st > 180){
+		if (st > lastScrollTop){
+			// Rolagem para baixo
+				nav.classList.add("hide");
+		}
+		if(st < lastScrollTop) nav.classList.remove('hide');
+	} else{
+		nav.classList.remove('hide')
+	}
+
+  lastScrollTop = st <= 0 ? 0 : st
+
+	
+	sections.forEach(section => {
+		const sectionTop = section.offsetTop - 250;
+		console.log(sectionTop);
+		
+		if(scrollY >= sectionTop) {
+			current = section.getAttribute('id');
+		}
+	});
+
+	navLinks.forEach(link => {
+    link.classList.remove('nav-active');
+    if (link.hash === '#' + current) {
+      link.classList.add('nav-active');
+    }
+  });
+
+}
