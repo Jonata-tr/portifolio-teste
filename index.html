@@ -39,7 +39,7 @@
               <button class="red-button">Contrate-me</button>
             </div>
             <div class="home-buttons">
-              <button class="red-button">Fale comigo</button>
+              <a href="#contact" class="red-button">Fale comigo</a>
             </div>
           </div>
         </div>
@@ -271,8 +271,21 @@
 
       <section class="contact" id="contact">
         <div class="contact-holder">
-          <h2 class="section-header">Me mande um email ou fale comigo por outros canais.</h2>
+          <h2 class="section-header">Fale comigo ou veja minhas redes.</h2>
           <div class="contact-content">
+
+            <div class="others-contact">
+              <a href="">
+                <img src="./assets/discord-svgrepo-com.svg" alt="">
+              </a>
+              <a href="">
+                <img src="./assets/github-outline-svgrepo-com.svg" alt="">
+              </a>
+              <a href="">
+                <img src="./assets/linkedin-rounded-border-svgrepo-com.svg" alt="">
+              </a>
+            </div>
+
             <div class="contact-form">
               <form
                 target="_blank"
@@ -290,14 +303,14 @@
                         type="text"
                         name="name"
                         class="form-control"
-                        placeholder="Full Name"
+                        placeholder="Nome*"
                         required
                       />
                       <input
                         type="text"
                         name="assunto"
                         class="form-control"
-                        placeholder="Assunto da mensagem"
+                        placeholder="Assunto da mensagem*"
                         required
                       />
                     </div>
@@ -307,12 +320,13 @@
                         type="email"
                         name="email"
                         class="form-control"
-                        placeholder="Email Address"
+                        placeholder="Email Address*"
                         required
                       />
                     </div>
                   </div>
                 </div>
+
                 <div class="form-group">
                   <textarea
                     placeholder="Your Message"
@@ -323,10 +337,13 @@
                     required
                   ></textarea>
                 </div>
-                <button type="submit" class="btn btn-lg btn-dark btn-block">
+
+                <button type="submit" class="red-button">
                   Submit Form
                 </button>
               </form>
+
+
             </div>
 
             <!-- <div class="social-medias">
